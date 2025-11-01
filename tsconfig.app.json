@@ -24,7 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+  "types": ["d3-array", "d3-color", "d3-ease", "d3-interpolate", "d3-scale", "d3-shape", "d3-time", "d3-timer"]
   },
   "include": ["src"]
 }

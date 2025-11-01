@@ -1,9 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, TrendingUp } from "lucide-react";
+import AuthPage from "@/pages/Login";
+import { useNavigate } from "react-router-dom";
+import logo from "@/assets/logo.png";
+
+
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
@@ -19,8 +26,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center gap-2 font-bold text-xl">
-            <div className="bg-accent p-2 rounded-lg">
-              <TrendingUp className="h-6 w-6 text-accent-foreground" />
+            <div className="">
+              <img src={logo} alt="Logo"   className="h-16 w-16 rounded-sm object-cover text-accent-foreground" />
             </div>
             <span className="text-primary">AB Institute</span>
           </Link>
@@ -42,9 +49,12 @@ const Navbar = () => {
             <button onClick={() => scrollToSection("faq")} className="text-foreground hover:text-accent transition-colors">
               FAQ
             </button>
-            <Button onClick={() => scrollToSection("enroll")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              Enroll Now
-            </Button>
+            <Button onClick={() => navigate("/login")} className="bg-[#001F3F] hover:bg-[#001a35] text-white font-semibold" >
+            Login
+           </Button>
+
+           <Button onClick={() => scrollToSection("enroll")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"> 
+            Enroll Now </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,9 +81,9 @@ const Navbar = () => {
             <button onClick={() => scrollToSection("faq")} className="block w-full text-left text-foreground hover:text-accent transition-colors py-2">
               FAQ
             </button>
-            <Button onClick={() => scrollToSection("enroll")} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              Enroll Now
-            </Button>
+            <Button onClick={() => navigate("/login")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" >
+            Login
+           </Button>
           </div>
         )}
       </div>
