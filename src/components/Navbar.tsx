@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, TrendingUp } from "lucide-react";
-import AuthPage from "@/pages/Login";
+import AuthPage from "../pages/Login";
 import { useNavigate } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import logo from "../assets/logo.jpg";
 
 
 

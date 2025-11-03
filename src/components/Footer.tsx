@@ -1,5 +1,6 @@
 import { TrendingUp, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,11 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-accent p-2 rounded-lg">
-                <TrendingUp className="h-6 w-6 text-accent-foreground" />
-              </div>
+              {/* <div className="bg-accent p-2 rounded-lg"> */}
+            <div className="">
+              <img src={logo} alt="Logo"   className="h-16 w-16 rounded-sm object-cover text-accent-foreground" />
+            </div>              
+            {/* </div> */}
               <span className="font-bold text-xl">AB Institute</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">

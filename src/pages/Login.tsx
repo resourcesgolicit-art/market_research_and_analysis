@@ -345,7 +345,7 @@ const [error, setError] = useState("");
 <GoogleLogin onSuccess={handleSuccess} onError={handleGoogleError} />
       </div>
     </div>
-  );
+
 
             {!isLogin && (
               <p className="mt-6 text-center text-sm text-slate-400">
