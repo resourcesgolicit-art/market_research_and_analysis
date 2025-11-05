@@ -46,11 +46,11 @@ const Pricing = () => {
                 <CardContent className="space-y-8">
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-4 mb-4">
-                      <span className="text-2xl text-muted-foreground line-through">₹2,999</span>
-                      <span className="text-5xl md:text-6xl font-bold text-accent">₹999</span>
+                      <span className="text-2xl text-muted-foreground line-through">₹3,999</span>
+                      <span className="text-5xl md:text-6xl font-bold text-accent">₹1499</span>
                     </div>
                     <p className="text-success font-semibold text-lg">
-                      Save 67% - Limited Time Only!
+                      Save 63% - Limited Time Only!
                     </p>
                   </div>
 
@@ -106,11 +106,12 @@ const Pricing = () => {
                     size="lg" 
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-xl font-bold py-6"
                   >
-                    Enroll Now for ₹999
+                    Enroll Now for ₹1499
                   </Button>
-                  <p className="text-sm text-muted-foreground text-center">
-                    30-day money-back guarantee if you're not satisfied
-                  </p>
+                  <pre className="text-sm text-muted-foreground text-center">
+                    30-day money-back guarantee if you're not satisfied.<br />
+                    *Exclusive of GST
+                  </pre>
                 </CardFooter>
               </div>
             </div>

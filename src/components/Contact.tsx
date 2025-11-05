@@ -191,7 +191,7 @@ const Contact = () => {
                     description: "Payment gateway integration in progress. Contact us for direct enrollment.",
                   })}
                 >
-                  Enroll Now for ₹999
+                  Enroll Now for ₹1499
                 </Button>
               </CardContent>
             </Card>

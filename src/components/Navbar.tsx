@@ -34,15 +34,17 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection("about")} className="text-foreground hover:text-accent transition-colors">
+          <Link to="/">  <button onClick={() => scrollToSection("/")} className="text-foreground hover:text-accent transition-colors">
               About
-            </button>
+            </button></Link>
             <button onClick={() => scrollToSection("course")} className="text-foreground hover:text-accent transition-colors">
               Course
             </button>
-            <button onClick={() => scrollToSection("pricing")} className="text-foreground hover:text-accent transition-colors">
+           <Link to="/">
+            <button onClick={() => scrollToSection("/pricing")} className="text-foreground hover:text-accent transition-colors">
               Pricing
             </button>
+            </Link>
             <button onClick={() => scrollToSection("testimonials")} className="text-foreground hover:text-accent transition-colors">
               Success Stories
             </button>
@@ -55,6 +57,7 @@ const Navbar = () => {
 
            <Button onClick={() => scrollToSection("enroll")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"> 
             Enroll Now </Button>
+            
           </div>
 
           {/* Mobile Menu Button */}

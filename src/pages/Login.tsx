@@ -4,6 +4,7 @@ import { Eye, EyeOff, TrendingUp, Shield, Users, Award, Mail, Lock, User, ArrowR
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import Navbar from "@/components/Navbar";
+import heroImage from "@/assets/hero-trading.jpg";
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -127,6 +128,10 @@ const [error, setError] = useState("");
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNGgydi0yaC0ydjJ6bS0yIDJ2LTJoLTJ2Mmgyem0wLTRoMnYtMmgtMnYyem0wIDhoMnYtMmgtMnYyem0yLTJoMnYtMmgtMnYyem0wIDRoMnYtMmgtMnYyem0tMiAydi0yaC0ydjJoMnptLTItMmgtMnYyaDJ2LTJ6bTItNHYyaDJ2LTJoLTJ6bS0yLTJ2Mmgydi0yaC0yem0wIDB2LTJoLTJ2Mmgyem0tNCAyaDJ2LTJoLTJ2MnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
       <Navbar />
       {/* Left Side - Branding & Features */}
+            <div className="absolute inset-0 z-0">
+        <img src={heroImage} alt="Professional stock trading setup" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80"></div>
+      </div>
         <div className="mt-16 lg:flex lg:w-1/2 relative p-12 flex-col justify-between">
         <div className="relative z-10">
           

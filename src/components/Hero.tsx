@@ -37,7 +37,7 @@ const Hero = () => {
               size="lg" 
               className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg font-bold px-8 py-6 shadow-lg hover:shadow-xl transition-all"
             >
-              Enroll for ₹999 <ArrowRight className="ml-2 h-5 w-5" />
+              Enroll for ₹1499 <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               onClick={() => document.getElementById("course")?.scrollIntoView({ behavior: "smooth" })} 
