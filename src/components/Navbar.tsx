@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, TrendingUp } from "lucide-react";
-import AuthPage from "../pages/Login";
-import { useNavigate } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom"; 
 import logo from "../assets/logo.jpg";
-
 
 
 const Navbar = () => {
@@ -27,36 +25,47 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center gap-2 font-bold text-xl">
             <div className="">
-              <img src={logo} alt="Logo"   className="h-16 w-16 rounded-sm object-cover text-accent-foreground" />
+              <img src={logo} alt="Logo" className="h-16 w-16 rounded-sm object-cover text-accent-foreground" />
             </div>
             <span className="text-primary">AB Institute</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-          <Link to="/">  <button onClick={() => scrollToSection("/")} className="text-foreground hover:text-accent transition-colors">
+            
+            {/* FIX: Changed to "about" to match mobile & common naming convention */}
+            <button onClick={() => scrollToSection("about")} className="text-foreground hover:text-accent transition-colors">
               About
-            </button></Link>
+            </button>
+            
             <button onClick={() => scrollToSection("course")} className="text-foreground hover:text-accent transition-colors">
               Course
             </button>
-           <Link to="/">
-            <button onClick={() => scrollToSection("/pricing")} className="text-foreground hover:text-accent transition-colors">
+            
+            {/* Using Link for navigation to a different page/section */}
+            <Link to="/pricing" className="text-foreground hover:text-accent transition-colors">
               Pricing
-            </button>
             </Link>
+            
             <button onClick={() => scrollToSection("testimonials")} className="text-foreground hover:text-accent transition-colors">
               Success Stories
             </button>
+            
             <button onClick={() => scrollToSection("faq")} className="text-foreground hover:text-accent transition-colors">
               FAQ
             </button>
-            <Button onClick={() => navigate("/login")} className="bg-[#001F3F] hover:bg-[#001a35] text-white font-semibold" >
-            Login
-           </Button>
+            
+            {/* Login button now using navigate("/logindash") */}
+            <Button 
+              onClick={() => navigate("/logindash")} 
+              className="bg-[#001F3F] hover:bg-[#001a35] text-white font-semibold" 
+            >
+              Login
+            </Button>
 
-           <Button onClick={() => scrollToSection("enroll")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"> 
-            Enroll Now </Button>
+            <Button onClick={() => scrollToSection("enroll")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"> 
+              Enroll Now 
+            </Button>
             
           </div>
 
@@ -69,24 +78,38 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-4">
+            
             <button onClick={() => scrollToSection("about")} className="block w-full text-left text-foreground hover:text-accent transition-colors py-2">
               About
             </button>
             <button onClick={() => scrollToSection("course")} className="block w-full text-left text-foreground hover:text-accent transition-colors py-2">
               Course
             </button>
-            <button onClick={() => scrollToSection("pricing")} className="block w-full text-left text-foreground hover:text-accent transition-colors py-2">
+            <Link 
+              to="/pricing" 
+              onClick={() => setIsOpen(false)} // Close menu on navigation
+              className="block w-full text-left text-foreground hover:text-accent transition-colors py-2"
+            >
               Pricing
-            </button>
+            </Link>
             <button onClick={() => scrollToSection("testimonials")} className="block w-full text-left text-foreground hover:text-accent transition-colors py-2">
               Success Stories
             </button>
             <button onClick={() => scrollToSection("faq")} className="block w-full text-left text-foreground hover:text-accent transition-colors py-2">
               FAQ
             </button>
-            <Button onClick={() => navigate("/login")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" >
-            Login
-           </Button>
+            
+            {/* FIX: Login button now using navigate("/logindash") */}
+            <Button 
+              onClick={() => {
+                navigate("/logindash");
+                setIsOpen(false); // Close menu after clicking
+              }} 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" 
+            >
+              Login
+            </Button>
+            
           </div>
         )}
       </div>
