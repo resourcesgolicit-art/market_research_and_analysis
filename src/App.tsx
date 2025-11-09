@@ -11,7 +11,7 @@ import EReader from "./pages/EReader";
 import WebinarAccess from "./pages/WebinarAccess";
 import NotFound from "./pages/NotFound";
 import Logindash from "./pages/logindash";
-import LoginForm from "./pages/login";
+import LoginPage from "./pages/login";
 import RegistrationForm from "./pages/register";
 import ForgotPasswordForm from "./pages/forgotpassword";
 import ResetPasswordForm from "./pages/reset";
@@ -31,7 +31,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/logindash" element={<Logindash />} />
-            <Route path="/loginform" element={<LoginForm />} />
+            <Route path="/loginPage" element={<LoginPage />} />
             <Route path="/registerform" element={<RegistrationForm />} />
             <Route path="/forgotpassword" element={<ForgotPasswordForm />} />
             <Route path="/resetpassword" element={<ResetPasswordForm />} />
