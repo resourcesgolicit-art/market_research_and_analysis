@@ -11,7 +11,7 @@ import EReader from "./pages/EReader";
 import WebinarAccess from "./pages/WebinarAccess";
 import NotFound from "./pages/NotFound";
 import Logindash from "./pages/logindash";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import RegistrationForm from "./pages/register";
 import ForgotPasswordForm from "./pages/forgotpassword";
 import ResetPasswordForm from "./pages/reset";
