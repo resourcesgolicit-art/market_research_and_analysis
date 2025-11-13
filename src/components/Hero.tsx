@@ -28,14 +28,17 @@ const Hero = () => {
           </Badge>
 
           <h1 className='text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight'>
-            Master the Indian Stock Market with{' '}
-            <span className='text-accent'>Expert-Led Training</span>
+            Become a Confident
+            <span className='text-accent'> Pro Trader</span> in Just 2 Weeks
           </h1>
 
           <p className='text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed'>
-            Learn candlestick patterns, doji strategies, and F&O trading from
-            practitioner Akash Bhattacharjee. Turn market knowledge into
-            confident trading decisions.
+            A focused 12-webinar learning sprint combining 6 theory sessions and
+            6 live practical trading sessions.
+            <br /> Designed for serious learners who want to master real-market
+            strategies, candle patterns, and F&O trading — guided by
+            professionals. <br />
+            Only 50 seats available per batch.
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4 mb-12'>
@@ -46,7 +49,8 @@ const Hero = () => {
               size='lg'
               className='bg-accent hover:bg-accent/90 text-accent-foreground text-lg font-bold px-8 py-6 shadow-lg hover:shadow-xl transition-all'
             >
-              Enroll for ₹1499 <ArrowRight className='ml-2 h-5 w-5' />
+              Enroll for ₹1499 + GST<sup>*</sup>{' '}
+              <ArrowRight className='ml-2 h-5 w-5' />
             </Button>
             <Button
               onClick={() =>
@@ -65,7 +69,7 @@ const Hero = () => {
           <div className='flex flex-wrap gap-8'>
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Users className='h-5 w-5 text-accent' />
-              <span className='font-semibold'>5000+ Students Trained</span>
+              <span className='font-semibold'>1000+ Students Trained</span>
             </div>
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Clock className='h-5 w-5 text-accent' />

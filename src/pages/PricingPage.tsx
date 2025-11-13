@@ -31,14 +31,14 @@ const PricingPage = () => {
   };
 
   const features = [
+    '12 Live Webinars',
+    'Workbook',
+    'Risk Sheets',
+    'Certificate',
+    'Doubt Clearing Sessions (Sat-Sun)',
     'Complete F&O Trading Strategy',
     'Advanced Candlestick Patterns',
     'Doji Trading Techniques',
-    'Live Market Practice Sessions',
-    'Risk Management Strategies',
-    'Technical Analysis Mastery',
-    'Real Trade Examples & Case Studies',
-    'Lifetime Access to Course Materials',
   ];
 
   const trustElements = [
@@ -97,7 +97,7 @@ const PricingPage = () => {
 
                     <div className='flex flex-col gap-2 w-full'>
                       <CardTitle className='text-3xl md:text-4xl font-bold text-primary leading-tight'>
-                        Complete F&O Trading Course Kit
+                        One Program — Lifetime of Skill
                       </CardTitle>
 
                       <CardDescription className='text-lg leading-snug'>
@@ -108,7 +108,7 @@ const PricingPage = () => {
                       {/* ✅ PRICE BLOCK */}
                       <div className='flex items-center gap-6 mt-2'>
                         <span className='text-3xl text-muted-foreground line-through'>
-                          ₹3,999
+                          ₹2,999
                         </span>
 
                         <div>
@@ -123,7 +123,7 @@ const PricingPage = () => {
 
                       {/* ✅ SAVE ROW */}
                       <p className='text-2xl font-semibold text-success leading-tight'>
-                        67% OFF - Final Price: ₹1,768
+                        50% OFF - Final Price: ₹1,768
                       </p>
                     </div>
                   </div>
@@ -158,23 +158,27 @@ const PricingPage = () => {
                         <ul className='space-y-2'>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>8 Live Zoom Webinars</span>
+                            <span>Market Knowhow & Technical Foundations</span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>All Session Recordings</span>
+                            <span>Candle Pattern Essentials </span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Candlestick Pattern E-Book</span>
+                            <span>Advanced Candle Pattern Mastery</span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Doji Strategy Workbook</span>
+                            <span>Trading Psychology & System Design</span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>F&O Trading Manual</span>
+                            <span>Risk Management & Position Sizing</span>
+                          </li>
+                          <li className='flex items-start gap-2'>
+                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
+                            <span>F&O Concepts & Derivatives Framework</span>
                           </li>
                         </ul>
                       </div>
@@ -185,23 +189,29 @@ const PricingPage = () => {
                         <ul className='space-y-2'>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Private Telegram Community</span>
+                            <span>
+                              Live Chart Reading & Pattern Recognition{' '}
+                            </span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Weekly Market Analysis</span>
+                            <span>Workbook Implementation Workshop</span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Trade Setup Alerts</span>
+                            <span>Live F&O Strategy Execution</span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Risk Calculator Tool</span>
+                            <span>Risk Calculator Hands-on Session</span>
                           </li>
                           <li className='flex items-start gap-2'>
                             <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Lifetime Content Updates</span>
+                            <span>Pro Trader Hack Session</span>
+                          </li>
+                          <li className='flex items-start gap-2'>
+                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
+                            <span>Live Trade Review & Strategy Refinement</span>
                           </li>
                         </ul>
                       </div>

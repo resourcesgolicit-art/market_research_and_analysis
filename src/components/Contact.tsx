@@ -176,11 +176,11 @@ const Contact = () => {
                       Email
                     </h4>
                     <p className='text-muted-foreground'>
-                      info@abinstitute.com
+                      info@abinstitute.co.in
                     </p>
-                    <p className='text-muted-foreground'>
+                    {/* <p className='text-muted-foreground'>
                       support@abinstitute.com
-                    </p>
+                    </p> */}
                   </div>
                 </div>
 
@@ -192,7 +192,7 @@ const Contact = () => {
                     <h4 className='font-semibold text-foreground mb-1'>
                       Phone
                     </h4>
-                    <p className='text-muted-foreground'>+91 98765 43210</p>
+                    <p className='text-muted-foreground'>+91 90738 50744</p>
                     <p className='text-sm text-muted-foreground mt-1'>
                       Mon-Sat, 10 AM - 6 PM IST
                     </p>
@@ -219,7 +219,7 @@ const Contact = () => {
               <CardContent className='p-6 text-accent-foreground'>
                 <h3 className='text-2xl font-bold mb-4'>Ready to Enroll?</h3>
                 <p className='mb-6'>
-                  Don't miss out on this limited-time offer. Join 5000+ students
+                  Don't miss out on this limited-time offer. Join 1000+ students
                   who have transformed their trading journey with us.
                 </p>
                 <ul className='space-y-2 mb-6'>
