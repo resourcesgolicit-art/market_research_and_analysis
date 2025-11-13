@@ -36,9 +36,8 @@ const PricingPage = () => {
     'Risk Sheets',
     'Certificate',
     'Doubt Clearing Sessions (Sat-Sun)',
-    'Complete F&O Trading Strategy',
+
     'Advanced Candlestick Patterns',
-    'Doji Trading Techniques',
   ];
 
   const trustElements = [

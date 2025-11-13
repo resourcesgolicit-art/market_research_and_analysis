@@ -109,11 +109,11 @@ const Pricing = () => {
                     </h4>
                     <ul className='space-y-3'>
                       {[
-                        'Private Telegram Community',
-                        'Weekly Market Analysis',
-                        'Trade Setup Alerts',
-                        'Risk Calculator Tool',
-                        'Lifetime Access to Updates',
+                        'Live Chart Reading & Pattern Recognition',
+                        'Workbook Implementation Workshop',
+                        'Live F&O Strategy Execution',
+                        'Risk Calculator Hands-on Session',
+                        'Pro Trader Hack Session',
                       ].map((item, index) => (
                         <li key={index} className='flex items-start gap-2'>
                           <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
