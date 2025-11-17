@@ -12,8 +12,10 @@ import {
   Lightbulb,
   ShieldAlert,
   Video,
+  ArrowRight,
 } from 'lucide-react';
 import candlestickImage from '@/assets/candlestick-patterns.jpg';
+import { Button } from '@/components/ui/button';
 
 const features = [
   {
@@ -92,7 +94,7 @@ const CourseFeatures = () => {
           <div className='grid md:grid-cols-2 gap-0'>
             <div className='p-8 md:p-12 flex flex-col justify-center'>
               <h3 className='text-2xl md:text-3xl font-bold text-primary mb-6'>
-                Master Candlestick Patterns
+                Master Advanced Candlestick Patterns Like a Pro
               </h3>
               <div className='space-y-4 text-foreground'>
                 <div className='flex items-start gap-3'>
@@ -164,6 +166,16 @@ const CourseFeatures = () => {
                   </div>
                   <p>Risk management and position sizing for each pattern</p>
                 </div>
+                <Button
+                  onClick={() =>
+                    (window.location.href = 'https://abdash.netlify.app/auth')
+                  }
+                  size='lg'
+                  className='bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all'
+                >
+                  Understand How Patterns Drive Real Market Moves
+                  <ArrowRight className='ml-2 h-5 w-5' />
+                </Button>
               </div>
             </div>
             <div className='h-full min-h-[400px]'>

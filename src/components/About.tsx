@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award, Briefcase, GraduationCap, Users } from 'lucide-react';
+import { Award, Briefcase, ShieldCheck, Users } from 'lucide-react';
 import trainerImage from '@/assets/trainer-akash.jpg';
 
 const About = () => {
@@ -10,10 +10,10 @@ const About = () => {
       label: '10+ Years Trading Experience',
       color: 'text-accent',
     },
-    { icon: Users, label: '1000+ Students Trained', color: 'text-success' },
+    { icon: Users, label: '2000+ Students Trained', color: 'text-success' },
     {
-      icon: GraduationCap,
-      label: 'Certified Market Analyst',
+      icon: ShieldCheck,
+      label: 'NSE-certified',
       color: 'text-primary',
     },
     { icon: Award, label: 'Featured in Business Today', color: 'text-accent' },
@@ -52,18 +52,16 @@ const About = () => {
 
             <div className='prose prose-lg'>
               <p className='text-foreground leading-relaxed'>
-                With over a decade of experience in the Indian stock market,
-                Akash has helped thousands of individuals transform from
-                beginners to confident traders. His practical, strategy-driven
-                approach focuses on real-world applications rather than just
-                theory.
+                With 10+ years of live trading experience, Akash Bhattacharjee
+                has mentored 2000+ traders on advanced strategies and psychology
+                behind market movements.
               </p>
-              <p className='text-foreground leading-relaxed'>
+              {/* <p className='text-foreground leading-relaxed'>
                 Specializing in candlestick patterns, doji strategies, and F&O
                 trading, Akash brings hands-on trading experience to every
                 session. He actively trades in NSE and BSE, providing students
                 with current market insights and proven strategies.
-              </p>
+              </p> */}
             </div>
 
             <div className='grid grid-cols-2 gap-4 pt-4'>
@@ -82,7 +80,7 @@ const About = () => {
               ))}
             </div>
 
-            <div className='bg-secondary p-6 rounded-lg'>
+            {/* <div className='bg-secondary p-6 rounded-lg'>
               <h4 className='font-semibold text-primary mb-3 flex items-center gap-2'>
                 <Badge className='bg-accent text-accent-foreground'>
                   Why Learn From Me?
@@ -94,7 +92,7 @@ const About = () => {
                 <li>• Simplified strategies that actually work</li>
                 <li>• Ongoing mentorship and community support</li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

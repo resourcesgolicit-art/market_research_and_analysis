@@ -208,7 +208,7 @@ const Contact = () => {
                       Office
                     </h4>
                     <p className='text-muted-foreground'>
-                      Kolkata, West Bengal, India
+                      Kolkata-based Trading Academy
                     </p>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ const Contact = () => {
               <CardContent className='p-6 text-accent-foreground'>
                 <h3 className='text-2xl font-bold mb-4'>Ready to Enroll?</h3>
                 <p className='mb-6'>
-                  Don't miss out on this limited-time offer. Join 1000+ students
+                  Don't miss out on this limited-time offer. Join 2000+ students
                   who have transformed their trading journey with us.
                 </p>
                 <ul className='space-y-2 mb-6'>

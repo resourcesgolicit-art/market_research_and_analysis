@@ -41,7 +41,7 @@ const PricingPage = () => {
   ];
 
   const trustElements = [
-    { icon: Users, label: '1000+ Students Trained', color: 'text-accent' },
+    { icon: Users, label: '2000+ Students Trained', color: 'text-accent' },
     {
       icon: TrendingUp,
       label: 'Live Interactive Training',

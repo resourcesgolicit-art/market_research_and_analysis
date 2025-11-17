@@ -28,16 +28,13 @@ const Hero = () => {
           </Badge>
 
           <h1 className='text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight'>
-            Become a Confident
-            <span className='text-accent'> Pro Trader</span> in Just 2 Weeks
+            <span className='text-accent'>Master F&O Trading </span>with 12
+            Power-Packed Webinars in 2 Weeks
           </h1>
 
           <p className='text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed'>
-            A focused 12-webinar learning sprint combining 6 theory sessions and
-            6 live practical trading sessions.
-            <br /> Designed for serious learners who want to master real-market
-            strategies, candle patterns, and F&O trading — guided by
-            professionals. <br />
+            Join our Advanced Candle Pattern & F&O Strategy Workshop — Now only
+            1499 (excl. GST) <br />
             Only 50 seats available per batch.
           </p>
 
@@ -49,7 +46,7 @@ const Hero = () => {
               size='lg'
               className='bg-accent hover:bg-accent/90 text-accent-foreground text-lg font-bold px-8 py-6 shadow-lg hover:shadow-xl transition-all'
             >
-              Enroll for ₹1499 + GST<sup>*</sup>{' '}
+              Enroll Now
               <ArrowRight className='ml-2 h-5 w-5' />
             </Button>
             <Button
@@ -62,14 +59,14 @@ const Hero = () => {
               variant='outline'
               className='bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 text-lg px-8 py-6'
             >
-              Learn More
+              View Course Details
             </Button>
           </div>
 
           <div className='flex flex-wrap gap-8'>
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Users className='h-5 w-5 text-accent' />
-              <span className='font-semibold'>1000+ Students Trained</span>
+              <span className='font-semibold'>2000+ Students Trained</span>
             </div>
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Clock className='h-5 w-5 text-accent' />

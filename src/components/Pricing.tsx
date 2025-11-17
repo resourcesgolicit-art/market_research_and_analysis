@@ -63,12 +63,27 @@ const Pricing = () => {
                     </CardDescription>
 
                     {/* PRICE ROW */}
-                    <div className='flex items-center gap-4 mt-1'>
-                      <span className='text-2xl text-muted-foreground line-through'>
-                        ₹2,999
-                      </span>
-                      <span className='text-5xl md:text-6xl font-bold text-accent leading-none'>
-                        ₹1499
+                    <div className='flex flex-col md:flex-row md:items-end gap-2 mt-2'>
+                      <div className='flex items-center gap-3'>
+                        <span className='text-2xl text-muted-foreground line-through'>
+                          ₹3,999
+                        </span>
+                        <span className='text-3xl text-muted-foreground'>
+                          ₹2,999
+                        </span>
+                      </div>
+
+                      <div className='flex items-baseline gap-2'>
+                        <span className='text-5xl md:text-6xl font-bold text-accent leading-none'>
+                          ₹1,499
+                        </span>
+                        <span className='text-sm text-gray-400'>
+                          (excl. GST)
+                        </span>
+                      </div>
+
+                      <span className='text-lg text-green-400 font-semibold md:ml-4'>
+                        Now only!
                       </span>
                     </div>
 
@@ -109,7 +124,7 @@ const Pricing = () => {
                     </h4>
                     <ul className='space-y-3'>
                       {[
-                        'Live Chart Reading & Pattern Recognition',
+                        '• Lifetime Access to Recordings',
                         'Workbook Implementation Workshop',
                         'Live F&O Strategy Execution',
                         'Risk Calculator Hands-on Session',

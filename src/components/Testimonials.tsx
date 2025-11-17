@@ -15,15 +15,15 @@ const testimonials = [
     achievement: 'Swing Trader',
   },
   {
-    name: 'Amit P.',
+    name: 'Ankit S.',
     rating: 5,
-    text: 'Best investment I made was in this course. The F&O strategies are well-explained with risk management. Made back the course fee in my first successful trade!',
-    achievement: 'Recovered course fee in first month',
+    text: 'After attending LearnStock, I could finally read the market like a book. Doubled my profits in 2 months.',
+    achievement: 'F&O Trader',
   },
   {
-    name: 'Sneha R.',
+    name: 'Ritu S.',
     rating: 5,
-    text: 'As a working professional, the recorded sessions helped me learn at my own pace. The Telegram community is super active and supportive. Highly recommended!',
+    text: 'The pro trader hacks changed my entire approach. Highly recommended.',
     achievement: 'Learning while working full-time',
   },
   {
@@ -100,7 +100,7 @@ const Testimonials = () => {
               </div>
               <div className='h-12 w-px bg-border hidden sm:block'></div>
               <div className='text-center'>
-                <p className='text-4xl font-bold text-success mb-1'>1000+</p>
+                <p className='text-4xl font-bold text-success mb-1'>2000+</p>
                 <p className='text-sm text-muted-foreground'>
                   Students Trained
                 </p>
