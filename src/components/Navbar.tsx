@@ -1,149 +1,114 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
 const Navbar = () => {
   const navigate = useNavigate();
-
   const [isOpen, setIsOpen] = useState(false);
 
+  // Lock background scroll
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-    }
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
   };
 
   return (
-    <nav className='fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50'>
-      <div className='container mx-auto px-4'>
-        <div className='flex justify-between items-center h-16'>
-          <Link to='/' className='flex items-center gap-2 font-bold text-xl'>
-            <div className=''>
-              <img
-                src={logo}
-                alt='Logo'
-                className='h-16 w-16 rounded-sm object-cover text-accent-foreground'
-              />
-            </div>
+    <nav className='fixed top-0 left-0 w-full bg-background border-b z-50'>
+      {/* NAVBAR */}
+      <div className='w-full px-4'>
+        <div className='flex items-center justify-between h-16 max-w-7xl mx-auto'>
+          <Link to='/' className='flex items-center gap-2 text-xl font-bold'>
+            <img src={logo} alt='Logo' className='h-12 w-12 rounded-sm' />
             <span className='text-primary'>AB Institute</span>
           </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop */}
           <div className='hidden md:flex items-center gap-8'>
-            {/* FIX: Changed to "about" to match mobile & common naming convention */}
-            <button
-              onClick={() => navigate('/')}
-              className='text-foreground hover:text-accent transition-colors'
-            >
-              About
-            </button>
-
-            <button
-              onClick={() => scrollToSection('course')}
-              className='text-foreground hover:text-accent transition-colors'
-            >
-              Course
-            </button>
-
-            {/* Using Link for navigation to a different page/section */}
-            <Link
-              to='/pricing'
-              className='text-foreground hover:text-accent transition-colors'
-            >
-              Pricing
-            </Link>
-
-            <button
-              onClick={() => scrollToSection('testimonials')}
-              className='text-foreground hover:text-accent transition-colors'
-            >
+            <button onClick={() => navigate('/')}>About</button>
+            <button onClick={() => scrollToSection('course')}>Course</button>
+            <Link to='/pricing'>Pricing</Link>
+            <button onClick={() => scrollToSection('testimonials')}>
               Success Stories
             </button>
+            <button onClick={() => scrollToSection('faq')}>FAQ</button>
 
-            <button
-              onClick={() => scrollToSection('faq')}
-              className='text-foreground hover:text-accent transition-colors'
-            >
-              FAQ
-            </button>
-
-            {/* Login button now using navigate("/logindash") */}
             <Button
               onClick={() =>
                 (window.location.href = 'https://abdash.netlify.app/auth')
               }
-              className='bg-[#001F3F] hover:bg-[#001a35] text-white font-semibold'
+              className='bg-[#001F3F] text-white'
             >
               Login
             </Button>
-
-            <Button
-              onClick={() =>
-                (window.location.href = 'https://abdash.netlify.app/auth')
-              }
-              className='bg-accent hover:bg-accent/90 text-accent-foreground font-semibold'
-            >
-              Enroll Now
-            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className='md:hidden'>
-            {isOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
+          {/* Mobile Button */}
+          <button onClick={() => setIsOpen(true)} className='md:hidden'>
+            <Menu className='h-6 w-6' />
           </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className='md:hidden py-4 space-y-4'>
-            <button
-              onClick={() => scrollToSection('about')}
-              className='block w-full text-left text-foreground hover:text-accent transition-colors py-2'
-            >
-              About
+      {/* MOBILE DRAWER */}
+      <div
+        className={`fixed inset-0 z-[100] md:hidden ${
+          isOpen ? 'visible' : 'invisible'
+        }`}
+      >
+        {/* Overlay */}
+        <div
+          className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${
+            isOpen ? 'opacity-100' : 'opacity-0'
+          }`}
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Drawer */}
+        <div
+          className={`absolute top-0 left-0 w-full sm:w-[320px]
+          bg-white shadow-2xl transform transition-transform duration-300
+          ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        >
+          {/* Header */}
+          <div className='flex items-center justify-between h-16 px-4 border-b'>
+            <span className='text-lg font-semibold'>Menu</span>
+            <button onClick={() => setIsOpen(false)}>
+              <X className='h-6 w-6' />
             </button>
-            <button
-              onClick={() => scrollToSection('course')}
-              className='block w-full text-left text-foreground hover:text-accent transition-colors py-2'
-            >
-              Course
-            </button>
-            <Link
-              to='/pricing'
-              onClick={() => setIsOpen(false)} // Close menu on navigation
-              className='block w-full text-left text-foreground hover:text-accent transition-colors py-2'
-            >
+          </div>
+
+          {/* CONTENT — NO BLANK SPACE */}
+          <div className='px-6 py-8 flex flex-col items-center gap-6'>
+            <button onClick={() => scrollToSection('about')}>About</button>
+            <button onClick={() => scrollToSection('course')}>Course</button>
+            <Link to='/pricing' onClick={() => setIsOpen(false)}>
               Pricing
             </Link>
-            <button
-              onClick={() => scrollToSection('testimonials')}
-              className='block w-full text-left text-foreground hover:text-accent transition-colors py-2'
-            >
+            <button onClick={() => scrollToSection('testimonials')}>
               Success Stories
             </button>
-            <button
-              onClick={() => scrollToSection('faq')}
-              className='block w-full text-left text-foreground hover:text-accent transition-colors py-2'
-            >
-              FAQ
-            </button>
+            <button onClick={() => scrollToSection('faq')}>FAQ</button>
 
-            {/* FIX: Login button now using navigate("/logindash") */}
             <Button
               onClick={() =>
                 (window.location.href = 'https://abdash.netlify.app/auth')
               }
-              className='bg-[#001F3F] hover:bg-[#001a35] text-white font-semibold'
+              className='bg-[#001F3F] text-white w-full mt-4'
             >
               Login
             </Button>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

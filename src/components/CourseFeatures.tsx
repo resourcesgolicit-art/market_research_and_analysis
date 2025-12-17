@@ -56,7 +56,7 @@ const features = [
 
 const CourseFeatures = () => {
   return (
-    <section id='course' className='py-20 bg-secondary'>
+    <section id='course' cla ssName='py-20 bg-secondary'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12 animate-fade-in'>
           <h2 className='text-3xl md:text-4xl font-bold text-primary mb-4'>
@@ -91,14 +91,17 @@ const CourseFeatures = () => {
         </div>
 
         <div className='mt-16 bg-card rounded-2xl overflow-hidden shadow-xl'>
-          <div className='grid md:grid-cols-2 gap-0'>
-            <div className='p-8 md:p-12 flex flex-col justify-center'>
+          <div className='grid grid-cols-1 md:grid-cols-2'>
+            {/* LEFT CONTENT */}
+            <div className='p-6 sm:p-8 md:p-12 flex flex-col justify-center'>
               <h3 className='text-2xl md:text-3xl font-bold text-primary mb-6'>
                 Master Advanced Candlestick Patterns Like a Pro
               </h3>
-              <div className='space-y-4 text-foreground'>
+
+              <div className='space-y-4 text-foreground max-w-xl'>
+                {/* Item */}
                 <div className='flex items-start gap-3'>
-                  <div className='bg-success rounded-full p-1 mt-1'>
+                  <div className='bg-success rounded-full p-1 mt-1 shrink-0'>
                     <svg
                       className='h-4 w-4 text-success-foreground'
                       fill='currentColor'
@@ -111,13 +114,14 @@ const CourseFeatures = () => {
                       />
                     </svg>
                   </div>
-                  <p>
+                  <p className='leading-relaxed'>
                     20+ essential candlestick patterns explained with Indian
                     market examples
                   </p>
                 </div>
+
                 <div className='flex items-start gap-3'>
-                  <div className='bg-success rounded-full p-1 mt-1'>
+                  <div className='bg-success rounded-full p-1 mt-1 shrink-0'>
                     <svg
                       className='h-4 w-4 text-success-foreground'
                       fill='currentColor'
@@ -130,12 +134,13 @@ const CourseFeatures = () => {
                       />
                     </svg>
                   </div>
-                  <p>
+                  <p className='leading-relaxed'>
                     Live chart analysis sessions to practice pattern recognition
                   </p>
                 </div>
+
                 <div className='flex items-start gap-3'>
-                  <div className='bg-success rounded-full p-1 mt-1'>
+                  <div className='bg-success rounded-full p-1 mt-1 shrink-0'>
                     <svg
                       className='h-4 w-4 text-success-foreground'
                       fill='currentColor'
@@ -148,10 +153,13 @@ const CourseFeatures = () => {
                       />
                     </svg>
                   </div>
-                  <p>Trade setup strategies with entry and exit signals</p>
+                  <p className='leading-relaxed'>
+                    Trade setup strategies with entry and exit signals
+                  </p>
                 </div>
+
                 <div className='flex items-start gap-3'>
-                  <div className='bg-success rounded-full p-1 mt-1'>
+                  <div className='bg-success rounded-full p-1 mt-1 shrink-0'>
                     <svg
                       className='h-4 w-4 text-success-foreground'
                       fill='currentColor'
@@ -164,21 +172,29 @@ const CourseFeatures = () => {
                       />
                     </svg>
                   </div>
-                  <p>Risk management and position sizing for each pattern</p>
+                  <p className='leading-relaxed'>
+                    Risk management and position sizing for each pattern
+                  </p>
                 </div>
+
+                {/* CTA BUTTON */}
                 <Button
                   onClick={() =>
                     (window.location.href = 'https://abdash.netlify.app/auth')
                   }
                   size='lg'
-                  className='bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all'
+                  className='mt-6 w-full sm:w-auto bg-accent hover:bg-accent/90
+          text-accent-foreground text-base sm:text-lg px-6 sm:px-8 py-4
+          shadow-lg hover:shadow-xl transition-all break-words text-center'
                 >
                   Understand How Patterns Drive Real Market Moves
-                  <ArrowRight className='ml-2 h-5 w-5' />
+                  <ArrowRight className='ml-2 h-5 w-5 inline-block' />
                 </Button>
               </div>
             </div>
-            <div className='h-full min-h-[400px]'>
+
+            {/* RIGHT IMAGE */}
+            <div className='w-full h-64 sm:h-80 md:h-full'>
               <img
                 src={candlestickImage}
                 alt='Candlestick pattern examples'

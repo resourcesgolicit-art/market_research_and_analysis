@@ -17,28 +17,31 @@ const Hero = () => {
           alt='Professional stock trading setup'
           className='w-full h-full object-cover'
         />
-        <div className='absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80'></div>
+        <div className='absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80' />
       </div>
 
       <div className='container mx-auto px-4 relative z-10'>
-        <div className='max-w-3xl animate-fade-in'>
+        {/* CENTERED CONTENT */}
+        <div className='max-w-3xl mx-auto text-center animate-fade-in flex flex-col items-center'>
           <Badge className='mb-4 bg-success text-success-foreground border-0'>
             <Star className='h-4 w-4 mr-1 fill-current' />
             Limited Time Offer - Only 50 Seats Available
           </Badge>
 
           <h1 className='text-4xl md:text-6xl font-bold text-primary-foreground mb-6 leading-tight'>
-            <span className='text-accent'>Master F&O Trading </span>with 12
-            Power-Packed Webinars in 2 Weeks
+            <span className='text-accent'>Master F&O Trading </span>
+            with 12 Power-Packed Webinars in 2 Weeks
           </h1>
 
           <p className='text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed'>
             Join our Advanced Candle Pattern & F&O Strategy Workshop — Now only
-            1499 (excl. GST) <br />
+            1499 (excl. GST)
+            <br />
             Only 50 seats available per batch.
           </p>
 
-          <div className='flex flex-col sm:flex-row gap-4 mb-12'>
+          {/* Buttons */}
+          <div className='flex flex-col sm:flex-row gap-4 mb-12 justify-center'>
             <Button
               onClick={() =>
                 (window.location.href = 'https://abdash.netlify.app/auth')
@@ -49,6 +52,7 @@ const Hero = () => {
               Enroll Now
               <ArrowRight className='ml-2 h-5 w-5' />
             </Button>
+
             <Button
               onClick={() =>
                 document
@@ -63,17 +67,20 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className='flex flex-wrap gap-8'>
+          {/* Stats */}
+          <div className='flex flex-wrap justify-center gap-8 text-center'>
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Users className='h-5 w-5 text-accent' />
               <span className='font-semibold'>2000+ Students Trained</span>
             </div>
+
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Clock className='h-5 w-5 text-accent' />
               <span className='font-semibold'>
                 Live Zoom Sessions + Recordings
               </span>
             </div>
+
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Star className='h-5 w-5 text-accent fill-accent' />
               <span className='font-semibold'>4.8/5 Average Rating</span>

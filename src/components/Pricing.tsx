@@ -124,7 +124,7 @@ const Pricing = () => {
                     </h4>
                     <ul className='space-y-3'>
                       {[
-                        '• Lifetime Access to Recordings',
+                        'Lifetime Access to Recordings',
                         'Workbook Implementation Workshop',
                         'Live F&O Strategy Execution',
                         'Risk Calculator Hands-on Session',

@@ -1,4 +1,4 @@
-import { TrendingUp, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
@@ -162,58 +162,32 @@ const Footer = () => {
               before making any investment decisions.
             </p>
           </div>
-
           {/* Copyright */}
           <div className='text-white footer-bottom'>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexWrap: 'wrap',
-                gap: '10px',
-              }}
-            >
+            <div className='flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 text-center text-sm'>
               <span>
                 © {currentYear} AB Institute of Market Research & Analysis. All
                 Rights Reserved
               </span>
-              <span style={{ margin: '0 5px' }}>|</span>
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                }}
-              >
+
+              {/* Divider */}
+              <span className='hidden md:inline'>|</span>
+
+              {/* Powered By */}
+              <div className='flex items-center gap-2'>
                 <span>Powered by</span>
                 <a
                   href='https://golicit.in'
                   target='_blank'
                   rel='noopener noreferrer'
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '5px',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    transition: 'opacity 0.3s',
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.7')}
-                  onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+                  className='flex items-center gap-2 hover:opacity-70 transition-opacity'
                 >
                   <img
                     src='company_logo.png'
                     alt='Golicit Logo'
-                    style={{
-                      width: '24px',
-                      height: '24px',
-                      borderRadius: '4px',
-                    }}
+                    className='w-6 h-6 rounded'
                   />
-                  <span style={{ fontWeight: '500' }}>
-                    Golicit Services Pvt Ltd
-                  </span>
+                  <span className='font-medium'>Golicit Services Pvt Ltd</span>
                 </a>
               </div>
             </div>

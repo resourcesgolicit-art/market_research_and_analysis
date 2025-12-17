@@ -1,5 +1,4 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Award, Briefcase, ShieldCheck, Users } from 'lucide-react';
 import trainerImage from '@/assets/trainer-akash.jpg';
 
@@ -24,7 +23,7 @@ const About = () => {
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12 animate-fade-in'>
           <h2 className='text-3xl md:text-4xl font-bold text-primary mb-4'>
-            Meet Your Trainer
+            Meet Your Instructor
           </h2>
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
             Learn from a practitioner who trades daily in the Indian markets
