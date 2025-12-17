@@ -31,11 +31,23 @@ const About = () => {
         </div>
 
         <div className='grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto'>
-          <div className='animate-fade-in'>
+          <div className='animate-fade-in flex justify-center'>
             <img
               src={trainerImage}
               alt='Akash Bhattacharjee - Stock Market Trainer'
-              className='rounded-2xl shadow-2xl w-full'
+              className='
+      rounded-2xl shadow-2xl
+      w-full
+      max-w-xs
+      sm:max-w-sm
+      md:max-w-sm
+      lg:max-w-md
+      max-h-[500px]
+      sm:max-h-[500px]
+      md:max-h-[500px]
+      object-cover
+      object-top
+    '
             />
           </div>
 
