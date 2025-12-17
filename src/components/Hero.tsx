@@ -77,7 +77,7 @@ const Hero = () => {
             <div className='flex items-center gap-2 text-primary-foreground'>
               <Clock className='h-5 w-5 text-accent' />
               <span className='font-semibold'>
-                Live Zoom Sessions + Recordings
+                Live Webinar Sessions + Recordings
               </span>
             </div>
 

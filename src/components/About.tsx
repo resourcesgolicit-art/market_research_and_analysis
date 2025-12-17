@@ -6,13 +6,13 @@ const About = () => {
   const achievements = [
     {
       icon: Briefcase,
-      label: '10+ Years Trading Experience',
+      label: 'Years of Trading Experience',
       color: 'text-accent',
     },
     { icon: Users, label: '2000+ Students Trained', color: 'text-success' },
     {
       icon: ShieldCheck,
-      label: 'NSE-certified',
+      label: 'NSIM-certified',
       color: 'text-primary',
     },
     { icon: Award, label: 'Featured in Business Today', color: 'text-accent' },
@@ -63,8 +63,8 @@ const About = () => {
 
             <div className='prose prose-lg'>
               <p className='text-foreground leading-relaxed'>
-                With 10+ years of live trading experience, Akash Bhattacharjee
-                has mentored 2000+ traders on advanced strategies and psychology
+                With years of live trading experience, Akash Bhattacharjee has
+                mentored 2000+ traders on advanced strategies and psychology
                 behind market movements.
               </p>
               {/* <p className='text-foreground leading-relaxed'>
