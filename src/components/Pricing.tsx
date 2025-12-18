@@ -29,8 +29,7 @@ const Pricing = () => {
           </h2>
 
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto mb-0'>
-            Get lifetime access to our comprehensive course at an unbeatable
-            price
+            Master Option Trading - from Strategy to Execution
           </p>
         </div>
 

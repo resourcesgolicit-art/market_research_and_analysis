@@ -71,7 +71,7 @@ const PricingPage = () => {
               Master Stock Market Trading
             </h1>
             <p className='text-xl text-muted-foreground max-w-3xl mx-auto mb-6'>
-              Join India's Most Practical F&O and Candlestick Trading Program
+              Master Option Trading - from Strategy to Execution{' '}
             </p>
           </div>
 

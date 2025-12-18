@@ -12,7 +12,7 @@ const About = () => {
     { icon: Users, label: '2000+ Students Trained', color: 'text-success' },
     {
       icon: ShieldCheck,
-      label: 'NSIM-certified',
+      label: 'NISM-certified',
       color: 'text-primary',
     },
     { icon: Award, label: 'Featured in Business Today', color: 'text-accent' },
@@ -63,9 +63,9 @@ const About = () => {
 
             <div className='prose prose-lg'>
               <p className='text-foreground leading-relaxed'>
-                With years of live trading experience, Akash Bhattacharjee has
-                mentored 2000+ traders on advanced strategies and psychology
-                behind market movements.
+                A dedicated trading mentor, focuses on practical market
+                research, advanced strategies, and trader psychology for long
+                term success.
               </p>
               {/* <p className='text-foreground leading-relaxed'>
                 Specializing in candlestick patterns, doji strategies, and F&O
