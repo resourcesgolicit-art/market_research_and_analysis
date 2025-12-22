@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.jpg';
+// import logo from '../assets/logo.jpg';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -39,7 +39,11 @@ const Navbar = () => {
             to='/'
             className='flex items-center gap-2 text-xl font-bold text-white'
           >
-            <img src={logo} alt='Logo' className='h-12 w-12 rounded-sm' />
+            <img
+              src='/nav_logo.jpeg'
+              alt='Logo'
+              className='h-12 w-16 rounded-sm'
+            />
             <span>AB Institute</span>
           </Link>
 

@@ -46,7 +46,7 @@ const Pricing = () => {
 
                 <div className='flex flex-col md:flex-row items-start gap-5'>
                   <img
-                    src='/1.jpeg'
+                    src='/cover.jpeg'
                     alt='Course Image'
                     className='w-36 h-48 object-cover rounded-xl shadow-md'
                   />

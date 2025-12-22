@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.jpg';
+// import logo from '../assets/logo.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ const Footer = () => {
             <div className='flex items-center gap-2 mb-4'>
               <div className=''>
                 <img
-                  src={logo}
+                  src='logo.jpeg'
                   alt='Logo'
                   className='h-16 w-16 rounded-sm object-cover text-accent-foreground'
                 />
@@ -107,20 +107,36 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <Link
-                  to='/privacy'
+                <a
+                  href='/Privacy_Policy_abinstitute.pdf'
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className='text-primary-foreground/80 hover:text-accent transition-colors'
                 >
                   Privacy Policy
-                </Link>
+                </a>
               </li>
+
               <li>
-                <Link
-                  to='/terms'
+                <a
+                  href='/User End Agreement Terms of Service.pdf'
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className='text-primary-foreground/80 hover:text-accent transition-colors'
                 >
                   Terms of Service
-                </Link>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href='/Refund - Cancellation Policy_abinstitute.pdf'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-primary-foreground/80 hover:text-accent transition-colors'
+                >
+                  No Refund Policy
+                </a>
               </li>
             </ul>
           </div>

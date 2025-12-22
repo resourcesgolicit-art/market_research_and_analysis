@@ -83,13 +83,13 @@ const PricingPage = () => {
                   <div className='flex justify-center mb-6'>
                     <Badge className='bg-success text-success-foreground text-xl px-6 py-3 w-fit'>
                       <Zap className='h-6 w-6 mr-2' />
-                      Save ₹2,500 Today!
+                      Save ₹1,500 Today!
                     </Badge>
                   </div>
 
                   <div className='flex flex-col md:flex-row items-start gap-8'>
                     <img
-                      src='/1.jpeg'
+                      src='/cover.jpeg'
                       alt='Course'
                       className='w-32 md:w-40 rounded-xl shadow'
                     />
