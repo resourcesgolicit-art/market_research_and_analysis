@@ -27,11 +27,6 @@ const faqs = [
       "This is purely an educational course focused on teaching technical analysis and trading strategies. We do not provide investment advice or stock recommendations. You'll learn how to analyze markets and make your own informed trading decisions.",
   },
   {
-    question: 'What is the refund policy?',
-    answer:
-      "We offer a 30-day money-back guarantee. If you're not satisfied with the course quality within the first 30 days, simply email us for a full refund. No questions asked.",
-  },
-  {
     question: 'How long will it take to become profitable?',
     answer:
       'Trading profitability depends on many factors including your learning pace, practice time, and market conditions. Most students start seeing improvements in their trading decisions within 2-3 months of consistent learning and practice. However, we recommend starting with paper trading or small positions initially.',

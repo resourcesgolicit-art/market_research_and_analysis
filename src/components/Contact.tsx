@@ -225,7 +225,6 @@ const Contact = () => {
                 <ul className='space-y-2 mb-6'>
                   <li>✓ Instant access after payment</li>
                   <li>✓ All materials included</li>
-                  <li>✓ 30-day money-back guarantee</li>
                 </ul>
                 <Button
                   size='lg'

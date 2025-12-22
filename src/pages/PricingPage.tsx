@@ -257,11 +257,6 @@ const PricingPage = () => {
                       WhatsApp Support - Get Help Now
                     </Button>
                   </div>
-
-                  <p className='text-center text-sm text-muted-foreground'>
-                    30-day money-back guarantee • No questions asked refund
-                    policy
-                  </p>
                 </CardContent>
               </Card>
             </div>

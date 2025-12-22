@@ -35,7 +35,7 @@ const testimonials = [
   {
     name: 'Anita D.',
     rating: 5,
-    text: 'The course structure is perfect - starts with basics and gradually builds complexity. The doji strategy module helped me avoid several losing trades. Worth every rupee!',
+    text: 'The course structure is perfect - starts with basics and gradually builds complexity. The Understanding Candlestick Patterns strategy module helped me avoid several losing trades. Worth every rupee!',
     achievement: 'Improved win rate significantly',
   },
 ];

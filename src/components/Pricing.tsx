@@ -65,9 +65,6 @@ const Pricing = () => {
                     <div className='flex flex-col md:flex-row md:items-end gap-2 mt-2'>
                       <div className='flex items-center gap-3'>
                         <span className='text-2xl text-muted-foreground line-through'>
-                          ₹3,999
-                        </span>
-                        <span className='text-3xl text-muted-foreground'>
                           ₹2,999
                         </span>
                       </div>
@@ -159,8 +156,6 @@ const Pricing = () => {
                   Enroll Now for ₹1499
                 </Button>
                 <pre className='text-sm text-muted-foreground text-center'>
-                  30-day money-back guarantee if you're not satisfied.
-                  <br />
                   *Exclusive of GST
                 </pre>
               </CardFooter>

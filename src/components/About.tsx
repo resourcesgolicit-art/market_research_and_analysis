@@ -68,7 +68,7 @@ const About = () => {
                 term success.
               </p>
               {/* <p className='text-foreground leading-relaxed'>
-                Specializing in candlestick patterns, doji strategies, and F&O
+                Specializing in candlestick patterns, Understanding Candlestick Patterns strategies, and F&O
                 trading, Akash brings hands-on trading experience to every
                 session. He actively trades in NSE and BSE, providing students
                 with current market insights and proven strategies.
