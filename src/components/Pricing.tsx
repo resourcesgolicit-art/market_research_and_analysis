@@ -25,68 +25,73 @@ const Pricing = () => {
           </Badge>
 
           <h2 className='text-3xl md:text-4xl font-bold text-primary mb-2'>
-            Special Launch Pricing
+            Master Option Trading Program - Strategy to Execution
           </h2>
 
+          {/* <p className='text-xl text-muted-foreground max-w-2xl mx-auto mb-0'>
+            Strategy to Execution
+          </p> */}
+
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto mb-0'>
-            Master Option Trading - from Strategy to Execution
+            Special Launch Pricing
           </p>
         </div>
 
         <div className='max-w-4xl mx-auto'>
           <div className='border-4 border-accent rounded-xl shadow-2xl overflow-hidden'>
             <Card className='border border-accent/40 rounded-xl'>
-              <CardHeader className='p-6 pb-4'>
+              <CardHeader className='p-4 sm:p-6 pb-4'>
+                {/* GREEN BADGE */}
                 <div className='flex justify-center mb-4'>
-                  <Badge className='bg-success text-success-foreground text-lg px-4 py-2 w-fit'>
-                    <Clock className='h-5 w-5 mr-2' />
-                    Only 50 Seats Available This Month
+                  <Badge className='bg-success text-success-foreground text-sm sm:text-lg px-3 py-2 text-center leading-tight max-w-full'>
+                    <Clock className='h-4 w-4 mr-2 shrink-0' />
+                    <span className='whitespace-normal'>
+                      Only 50 Seats Available This Month
+                    </span>
                   </Badge>
                 </div>
 
-                <div className='flex flex-col md:flex-row items-start gap-5'>
+                {/* IMAGE – FULL WIDTH ON MOBILE */}
+                <div className='w-full bg-black/5 rounded-xl shadow-md'>
                   <img
                     src='/cover.jpeg'
                     alt='Course Image'
-                    className='w-36 h-48 object-cover rounded-xl shadow-md'
+                    className='
+      w-full
+      h-auto
+      object-contain
+      rounded-xl
+    '
                   />
+                </div>
 
-                  <div className='flex flex-col gap-1'>
-                    <CardTitle className='text-3xl md:text-4xl font-bold text-primary leading-tight'>
-                      One Program — Lifetime of Skill
-                    </CardTitle>
+                {/* TEXT CONTENT */}
+                <div className='mt-5 flex flex-col gap-2'>
+                  <CardTitle className='text-2xl sm:text-3xl md:text-4xl font-bold text-primary leading-tight'>
+                    One Program — Lifetime of Skill
+                  </CardTitle>
 
-                    <CardDescription className='text-lg leading-snug'>
-                      Everything you need to start trading confidently in the
-                      Indian stock market
-                    </CardDescription>
+                  <CardDescription className='text-base sm:text-lg leading-snug'>
+                    Everything you need to start trading confidently in the
+                    Indian stock market
+                  </CardDescription>
 
-                    {/* PRICE ROW */}
-                    <div className='flex flex-col md:flex-row md:items-end gap-2 mt-2'>
-                      <div className='flex items-center gap-3'>
-                        <span className='text-2xl text-muted-foreground line-through'>
-                          ₹2,999
-                        </span>
-                      </div>
+                  {/* PRICE */}
+                  <div className='flex flex-col gap-1 mt-3'>
+                    <span className='text-lg text-muted-foreground line-through'>
+                      ₹2,999
+                    </span>
 
-                      <div className='flex items-baseline gap-2'>
-                        <span className='text-5xl md:text-6xl font-bold text-accent leading-none'>
-                          ₹1,499
-                        </span>
-                        <span className='text-sm text-gray-400'>
-                          (excl. GST)
-                        </span>
-                      </div>
-
-                      <span className='text-lg text-green-400 font-semibold md:ml-4'>
-                        Now only!
+                    <div className='flex items-baseline gap-2'>
+                      <span className='text-4xl sm:text-5xl font-bold text-accent'>
+                        ₹1,499
                       </span>
+                      <span className='text-xs text-gray-400'>(excl. GST)</span>
                     </div>
 
-                    {/* SAVE TEXT */}
-                    <p className='text-success font-semibold text-lg leading-tight'>
+                    <span className='text-success font-semibold text-sm'>
                       Save 50% – Limited Time Only!
-                    </p>
+                    </span>
                   </div>
                 </div>
               </CardHeader>

@@ -1,8 +1,11 @@
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -11,33 +14,29 @@ import {
   Check,
   Clock,
   Zap,
-  MessageCircle,
   Shield,
   Users,
-  BookOpen,
   TrendingUp,
+  BookOpen,
+  MessageCircle,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
 const PricingPage = () => {
-  const handleEnroll = () => {
-    // Scroll to contact or redirect to payment
-    window.open(
-      "https://wa.me/919876543210?text=I'm interested in the F&O Trading Course",
-      '_blank'
-    );
-  };
-
   const features = [
     '12 Live Webinars',
     'Workbook',
     'Risk Sheets',
     'Certificate',
     'Doubt Clearing Sessions (Sat-Sun)',
+  ];
 
-    'Advanced Candlestick Patterns',
+  const bonusFeatures = [
+    'Lifetime Access to Recordings',
+    'Workbook Implementation Workshop',
+    'Live F&O Strategy Execution',
+    'Risk Calculator Hands-on Session',
+    'Pro Trader Hack Session',
   ];
 
   const trustElements = [
@@ -61,232 +60,184 @@ const PricingPage = () => {
 
       <main className='pt-24 pb-20'>
         <div className='container mx-auto px-4'>
-          {/* Hero Section */}
-          <div className='text-center mb-12 animate-fade-in'>
-            <Badge className='mb-4 bg-accent text-accent-foreground border-0 text-lg px-6 py-2'>
-              <Clock className='h-5 w-5 mr-2' />
-              Limited Time Offer - Seats Filling Fast!
+          {/* HERO */}
+          <div className='text-center mb-10'>
+            <Badge className='mb-4 bg-accent text-accent-foreground border-0'>
+              <Zap className='h-4 w-4 mr-1' />
+              Limited Time Offer
             </Badge>
-            <h1 className='text-4xl md:text-5xl font-bold text-primary mb-4'>
-              Master Stock Market Trading
+
+            <h1 className='text-3xl md:text-4xl font-bold text-primary mb-2'>
+              Master Option Trading Program – Strategy to Execution
             </h1>
-            <p className='text-xl text-muted-foreground max-w-3xl mx-auto mb-6'>
-              Master Option Trading - from Strategy to Execution{' '}
+
+            <p className='text-xl text-muted-foreground'>
+              Special Launch Pricing
             </p>
           </div>
 
-          {/* Main Pricing Card */}
-          <div className='max-w-5xl mx-auto mb-16'>
+          {/* PRICING CARD */}
+          <div className='max-w-4xl mx-auto'>
             <div className='border-4 border-accent rounded-xl shadow-2xl overflow-hidden'>
-              <Card className='border border-accent/40 rounded-xl bg-card'>
-                <CardHeader className='pt-10 pb-6'>
-                  <div className='flex justify-center mb-6'>
-                    <Badge className='bg-success text-success-foreground text-xl px-6 py-3 w-fit'>
-                      <Zap className='h-6 w-6 mr-2' />
-                      Save ₹1,500 Today!
+              <Card className='border border-accent/40 rounded-xl'>
+                {/* 🔥 SAME HEADER STRUCTURE AS Pricing.tsx */}
+                <CardHeader className='p-4 sm:p-6 pb-4'>
+                  {/* GREEN BADGE */}
+                  <div className='flex justify-center mb-4'>
+                    <Badge className='bg-success text-success-foreground text-sm sm:text-lg px-3 py-2 text-center leading-tight max-w-full'>
+                      <Clock className='h-4 w-4 mr-2 shrink-0' />
+                      <span className='whitespace-normal'>
+                        Only 50 Seats Available This Month
+                      </span>
                     </Badge>
                   </div>
 
-                  <div className='flex flex-col md:flex-row items-start gap-8'>
+                  {/* IMAGE */}
+                  <div className='w-full bg-black/5 rounded-xl shadow-md'>
                     <img
                       src='/cover.jpeg'
                       alt='Course'
-                      className='w-32 md:w-40 rounded-xl shadow'
+                      className='w-full h-auto object-contain rounded-xl'
                     />
+                  </div>
 
-                    <div className='flex flex-col gap-2 w-full'>
-                      <CardTitle className='text-3xl md:text-4xl font-bold text-primary leading-tight'>
-                        One Program — Lifetime of Skill
-                      </CardTitle>
+                  {/* TEXT CONTENT */}
+                  <div className='mt-5 flex flex-col gap-2'>
+                    <CardTitle className='text-2xl sm:text-3xl md:text-4xl font-bold text-primary leading-tight'>
+                      One Program — Lifetime of Skill
+                    </CardTitle>
 
-                      <CardDescription className='text-lg leading-snug'>
-                        Everything you need to become a confident Indian stock
-                        market trader
-                      </CardDescription>
+                    <CardDescription className='text-base sm:text-lg leading-snug'>
+                      Everything you need to start trading confidently in the
+                      Indian stock market
+                    </CardDescription>
 
-                      {/* ✅ PRICE BLOCK */}
-                      <div className='flex items-center gap-6 mt-2'>
-                        <span className='text-3xl text-muted-foreground line-through'>
-                          ₹2,999
+                    {/* PRICE */}
+                    <div className='flex flex-col gap-1 mt-3'>
+                      <span className='text-lg text-muted-foreground line-through'>
+                        ₹2,999
+                      </span>
+
+                      <div className='flex items-baseline gap-2'>
+                        <span className='text-4xl sm:text-5xl font-bold text-accent'>
+                          ₹1,499
                         </span>
-
-                        <div>
-                          <div className='text-6xl md:text-7xl font-bold text-accent leading-none'>
-                            ₹1,499
-                          </div>
-                          <p className='text-sm text-muted-foreground mt-1'>
-                            + GST (18%)
-                          </p>
-                        </div>
+                        <span className='text-xs text-gray-400'>
+                          (excl. GST)
+                        </span>
                       </div>
 
-                      {/* ✅ SAVE ROW */}
-                      <p className='text-2xl font-semibold text-success leading-tight'>
-                        50% OFF - Final Price: ₹1,768
-                      </p>
+                      <span className='text-success font-semibold text-sm'>
+                        Save 50% – Limited Time Only!
+                      </span>
                     </div>
                   </div>
                 </CardHeader>
 
-                <CardContent className='space-y-8 px-8 pb-12'>
-                  {/* Features Grid */}
-                  <div className='grid md:grid-cols-2 gap-4'>
-                    {features.map((feature, index) => (
-                      <div
-                        key={index}
-                        className='flex items-start gap-3 p-4 bg-secondary rounded-lg hover:bg-secondary/80 transition-colors'
-                      >
-                        <Check className='h-6 w-6 text-success flex-shrink-0 mt-0.5' />
-                        <span className='text-foreground font-medium'>
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                {/* CONTENT */}
+                <CardContent className='p-6 space-y-8'>
+                  <div className='grid md:grid-cols-2 gap-6'>
+                    <div>
+                      <h4 className='font-semibold text-primary mb-4 text-lg'>
+                        Course Includes:
+                      </h4>
+                      <ul className='space-y-3'>
+                        {features.map((item, index) => (
+                          <li key={index} className='flex items-start gap-2'>
+                            <Check className='h-5 w-5 text-success mt-0.5' />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  {/* What's Included */}
-                  <div className='bg-gradient-hero p-8 rounded-lg text-primary-foreground'>
-                    <h3 className='text-2xl font-bold mb-6 text-center'>
-                      What's Included in Your Kit
-                    </h3>
-                    <div className='grid md:grid-cols-2 gap-6'>
-                      <div>
-                        <h4 className='font-semibold mb-3 text-lg'>
-                          Core Training:
-                        </h4>
-                        <ul className='space-y-2'>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Market Knowhow & Technical Foundations</span>
+                    <div>
+                      <h4 className='font-semibold text-primary mb-4 text-lg'>
+                        Bonus Features:
+                      </h4>
+                      <ul className='space-y-3'>
+                        {bonusFeatures.map((item, index) => (
+                          <li key={index} className='flex items-start gap-2'>
+                            <Check className='h-5 w-5 text-accent mt-0.5' />
+                            <span>{item}</span>
                           </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Candle Pattern Essentials </span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Advanced Candle Pattern Mastery</span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Trading Psychology & System Design</span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Risk Management & Position Sizing</span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>F&O Concepts & Derivatives Framework</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className='font-semibold mb-3 text-lg'>
-                          Bonus Support:
-                        </h4>
-                        <ul className='space-y-2'>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>
-                              Live Chart Reading & Pattern Recognition{' '}
-                            </span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Workbook Implementation Workshop</span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Live F&O Strategy Execution</span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Risk Calculator Hands-on Session</span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Pro Trader Hack Session</span>
-                          </li>
-                          <li className='flex items-start gap-2'>
-                            <Check className='h-5 w-5 text-accent flex-shrink-0 mt-0.5' />
-                            <span>Live Trade Review & Strategy Refinement</span>
-                          </li>
-                        </ul>
-                      </div>
+                        ))}
+                      </ul>
                     </div>
                   </div>
 
-                  {/* Payment Methods */}
                   <div className='bg-secondary p-6 rounded-lg'>
-                    <h4 className='font-semibold text-primary mb-3 flex items-center gap-2'>
-                      <Shield className='h-5 w-5' />
+                    <h4 className='font-semibold text-primary mb-3'>
                       Secure Payment Options
                     </h4>
-                    <p className='text-muted-foreground mb-3'>
+                    <p className='text-muted-foreground'>
                       UPI • Credit/Debit Cards • Net Banking • PhonePe • GPay •
                       Paytm
                     </p>
-                    <p className='text-sm text-success font-semibold'>
-                      ✓ Instant access after payment • ✓ GST Invoice provided
-                    </p>
-                  </div>
-
-                  {/* CTA Buttons */}
-                  <div className='space-y-4'>
-                    <Button
-                      onClick={() => (
-                        (window.location.href =
-                          'https://abdash.netlify.app/auth'),
-                        '_blank'
-                      )}
-                      size='lg'
-                      className='w-full bg-accent hover:bg-accent/90 text-accent-foreground text-2xl font-bold py-8'
-                    >
-                      Enroll Now for ₹1,499 + GST
-                    </Button>
-                    <Button
-                      onClick={() =>
-                        window.open('https://wa.me/919876543210', '_blank')
-                      }
-                      variant='outline'
-                      size='lg'
-                      className='w-full border-2 border-success text-success hover:bg-success hover:text-success-foreground text-lg font-semibold py-6'
-                    >
-                      <MessageCircle className='h-5 w-5 mr-2' />
-                      WhatsApp Support - Get Help Now
-                    </Button>
                   </div>
                 </CardContent>
+
+                {/* FOOTER */}
+                <CardFooter className='flex flex-col gap-4 pb-8'>
+                  <Button
+                    size='lg'
+                    className='
+    w-full
+    bg-accent hover:bg-accent/90
+    text-accent-foreground
+    text-base sm:text-lg
+    font-semibold
+    py-4
+  '
+                    onClick={() =>
+                      window.open('https://abdash.netlify.app/auth', '_blank')
+                    }
+                  >
+                    Enroll Now – ₹1,499
+                  </Button>
+
+                  <Button
+                    variant='outline'
+                    size='lg'
+                    className='w-full border-2 border-success text-success hover:bg-success hover:text-success-foreground'
+                    onClick={() =>
+                      window.open('https://wa.me/919876543210', '_blank')
+                    }
+                  >
+                    <MessageCircle className='h-5 w-5 mr-2' />
+                    WhatsApp Support
+                  </Button>
+
+                  <p className='text-sm text-muted-foreground text-center'>
+                    * GST applicable as per government norms
+                  </p>
+                </CardFooter>
               </Card>
             </div>
           </div>
 
-          {/* Trust Elements */}
-          <div className='max-w-5xl mx-auto grid md:grid-cols-4 gap-6 mb-16'>
+          {/* TRUST */}
+          <div className='max-w-4xl mx-auto grid md:grid-cols-4 gap-6 mt-16'>
             {trustElements.map((item, index) => (
-              <Card
-                key={index}
-                className='text-center hover:shadow-lg transition-shadow'
-              >
+              <Card key={index} className='text-center'>
                 <CardContent className='pt-6'>
                   <item.icon
-                    className={`h-12 w-12 mx-auto mb-3 ${item.color}`}
+                    className={`h-10 w-10 mx-auto mb-3 ${item.color}`}
                   />
-                  <p className='font-semibold text-foreground'>{item.label}</p>
+                  <p className='font-semibold'>{item.label}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          {/* Instructor Preview */}
-          <div className='max-w-3xl mx-auto text-center'>
+          {/* INSTRUCTOR */}
+          <div className='max-w-3xl mx-auto text-center mt-20'>
             <h2 className='text-3xl font-bold text-primary mb-4'>
               Learn from Akash Bhattacharjee
             </h2>
             <p className='text-lg text-muted-foreground mb-6'>
-              Experienced trader with 10+ years in Indian stock markets.
-              Specialized in F&O strategies and candlestick analysis.
+              Years of experience in Indian stock markets with a focus on F&O
+              and candlestick-based strategies.
             </p>
             <Link to='/#about'>
               <Button variant='outline' size='lg'>

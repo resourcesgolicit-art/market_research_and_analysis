@@ -16,9 +16,21 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  // const scrollToSection = (id: string) => {
+  //   const navbarHeight = 64; // h-16 = 64px
+
+  //   const el = document.getElementById(id);
+  //   if (el) {
+  //     const y =
+  //       el.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+  //     window.scrollTo({ top: y, behavior: 'smooth' });
+  //     setIsOpen(false);
+  //   }
+  // };
+
+  const navigateAndScroll = (id: string) => {
+    navigate(`/#${id}`);
     setIsOpen(false);
   };
 
@@ -52,23 +64,22 @@ const Navbar = () => {
             <button onClick={() => navigate('/')} className='hover:opacity-80'>
               About
             </button>
-            <button
-              onClick={() => scrollToSection('course')}
-              className='hover:opacity-80'
-            >
+            <Link to='/pricing' className='hover:opacity-80'>
               Course
-            </button>
+            </Link>
+
             <Link to='/pricing' className='hover:opacity-80'>
               Pricing
             </Link>
             <button
-              onClick={() => scrollToSection('testimonials')}
+              onClick={() => navigateAndScroll('testimonials')}
               className='hover:opacity-80'
             >
               Success Stories
             </button>
+
             <button
-              onClick={() => scrollToSection('faq')}
+              onClick={() => navigateAndScroll('faq')}
               className='hover:opacity-80'
             >
               FAQ
@@ -135,17 +146,19 @@ const Navbar = () => {
           {/* CONTENT */}
           <div className='px-6 py-8 flex flex-col items-center gap-6'>
             <button
-              onClick={() => scrollToSection('about')}
+              onClick={() => navigateAndScroll('about')}
               className='hover:opacity-80'
             >
               About
             </button>
-            <button
-              onClick={() => scrollToSection('course')}
+            <Link
+              to='/pricing'
+              onClick={() => setIsOpen(false)}
               className='hover:opacity-80'
             >
               Course
-            </button>
+            </Link>
+
             <Link
               to='/pricing'
               onClick={() => setIsOpen(false)}
@@ -154,13 +167,14 @@ const Navbar = () => {
               Pricing
             </Link>
             <button
-              onClick={() => scrollToSection('testimonials')}
+              onClick={() => navigateAndScroll('testimonials')}
               className='hover:opacity-80'
             >
               Success Stories
             </button>
+
             <button
-              onClick={() => scrollToSection('faq')}
+              onClick={() => navigateAndScroll('faq')}
               className='hover:opacity-80'
             >
               FAQ

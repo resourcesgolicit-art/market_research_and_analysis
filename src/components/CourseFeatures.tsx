@@ -56,7 +56,7 @@ const features = [
 
 const CourseFeatures = () => {
   return (
-    <section id='course' cla ssName='py-20 bg-secondary'>
+    <section id='why-us' className='py-20 bg-secondary'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12 animate-fade-in'>
           <h2 className='text-3xl md:text-4xl font-bold text-primary mb-4'>
@@ -183,12 +183,30 @@ const CourseFeatures = () => {
                     (window.location.href = 'https://abdash.netlify.app/auth')
                   }
                   size='lg'
-                  className='mt-6 w-full sm:w-auto bg-accent hover:bg-accent/90
-          text-accent-foreground text-base sm:text-lg px-6 sm:px-8 py-4
-          shadow-lg hover:shadow-xl transition-all break-words text-center'
+                  className='
+    mt-6
+    w-full
+    bg-accent hover:bg-accent/90
+    text-accent-foreground
+    px-4 py-4
+    shadow-lg hover:shadow-xl transition-all
+
+    flex items-center justify-center gap-2
+    !h-auto !overflow-visible
+    text-center leading-normal
+  '
                 >
-                  Understand How Patterns Drive Real Market Moves
-                  <ArrowRight className='ml-2 h-5 w-5 inline-block' />
+                  {/* MOBILE TEXT */}
+                  <span className='block sm:hidden text-sm font-semibold'>
+                    Understand Market Moves
+                  </span>
+
+                  {/* DESKTOP TEXT */}
+                  <span className='hidden sm:block text-base md:text-lg font-semibold'>
+                    Understand How Patterns Drive Real Market Moves
+                  </span>
+
+                  <ArrowRight className='h-5 w-5 shrink-0' />
                 </Button>
               </div>
             </div>
