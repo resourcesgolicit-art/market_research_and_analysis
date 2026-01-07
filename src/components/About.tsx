@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Award, Briefcase, ShieldCheck, Users } from 'lucide-react';
+import { Briefcase, ShieldCheck, Target, Users } from 'lucide-react';
 import trainerImage from '@/assets/trainer-akash.jpg';
 
 const About = () => {
@@ -12,10 +12,10 @@ const About = () => {
     { icon: Users, label: '2000+ Students Trained', color: 'text-success' },
     {
       icon: ShieldCheck,
-      label: 'NISM-certified',
+      label: '100% Secured Strategies',
       color: 'text-primary',
     },
-    { icon: Award, label: 'Featured in Business Today', color: 'text-accent' },
+    { icon: Target, label: 'All Working Strategies', color: 'text-accent' },
   ];
 
   return (

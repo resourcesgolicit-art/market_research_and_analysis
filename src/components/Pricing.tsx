@@ -154,7 +154,10 @@ const Pricing = () => {
 
               <CardFooter className='flex flex-col gap-4 pb-8'>
                 <Button
-                  onClick={scrollToEnroll}
+                  onClick={() => (
+                    (window.location.href = 'https://abdash.netlify.app/auth'),
+                    '_blank'
+                  )}
                   size='lg'
                   className='w-full bg-accent hover:bg-accent/90 text-accent-foreground text-xl font-bold py-6'
                 >

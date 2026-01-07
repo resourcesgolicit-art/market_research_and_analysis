@@ -61,7 +61,10 @@ const Navbar = () => {
 
           {/* Desktop */}
           <div className='hidden md:flex items-center gap-8 text-white'>
-            <button onClick={() => navigate('/')} className='hover:opacity-80'>
+            <button
+              onClick={() => navigateAndScroll('about')}
+              className='hover:opacity-80'
+            >
               About
             </button>
             <Link to='/pricing' className='hover:opacity-80'>

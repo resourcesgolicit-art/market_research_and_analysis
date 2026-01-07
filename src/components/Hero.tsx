@@ -2,11 +2,16 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Users, Star, Clock } from 'lucide-react';
 import heroImage from '@/assets/hero-trading.jpg';
+import { Link, Navigate } from 'react-router-dom';
 
 const Hero = () => {
   const scrollToEnroll = () => {
     document.getElementById('enroll')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  function navigateAndScroll(arg0: string): void {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <section className='relative min-h-screen flex items-center pt-16'>
@@ -53,17 +58,11 @@ const Hero = () => {
               <ArrowRight className='ml-2 h-5 w-5' />
             </Button>
 
-            <Button
-              onClick={() =>
-                document
-                  .getElementById('course')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
-              size='lg'
-              variant='outline'
-              className='bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 text-lg px-8 py-6'
-            >
-              View Course Details
+            <Button className='bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 text-lg px-8 py-6'>
+              {' '}
+              <Link to='/pricing' className='hover:opacity-80'>
+                View Course Details
+              </Link>
             </Button>
           </div>
 
