@@ -155,7 +155,7 @@ const Pricing = () => {
               <CardFooter className='flex flex-col gap-4 pb-8'>
                 <Button
                   onClick={() => (
-                    (window.location.href = 'https://abdash.netlify.app/auth'),
+                    (window.location.href = 'https://dash.abinstitute.co.in'),
                     '_blank'
                   )}
                   size='lg'

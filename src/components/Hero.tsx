@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Users, Star, Clock } from 'lucide-react';
 import heroImage from '@/assets/hero-trading.jpg';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const scrollToEnroll = () => {
@@ -49,7 +49,7 @@ const Hero = () => {
           <div className='flex flex-col sm:flex-row gap-4 mb-12 justify-center'>
             <Button
               onClick={() =>
-                (window.location.href = 'https://abdash.netlify.app/auth')
+                (window.location.href = 'https://dash.abinstitute.co.in')
               }
               size='lg'
               className='bg-accent hover:bg-accent/90 text-accent-foreground text-lg font-bold px-8 py-6 shadow-lg hover:shadow-xl transition-all'

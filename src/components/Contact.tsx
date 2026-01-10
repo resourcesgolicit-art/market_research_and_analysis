@@ -230,7 +230,7 @@ const Contact = () => {
                   size='lg'
                   className='w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold'
                   onClick={() =>
-                    (window.location.href = 'https://abdash.netlify.app/auth')
+                    (window.location.href = 'https://dash.abinstitute.co.in')
                   }
                 >
                   Enroll Now for ₹1499

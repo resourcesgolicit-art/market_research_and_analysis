@@ -180,7 +180,7 @@ const CourseFeatures = () => {
                 {/* CTA BUTTON */}
                 <Button
                   onClick={() =>
-                    (window.location.href = 'https://abdash.netlify.app/auth')
+                    (window.location.href = 'https://dash.abinstitute.co.in')
                   }
                   size='lg'
                   className='

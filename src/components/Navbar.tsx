@@ -90,7 +90,7 @@ const Navbar = () => {
 
             <Button
               onClick={() =>
-                (window.location.href = 'https://abdash.netlify.app/auth')
+                (window.location.href = 'https://dash.abinstitute.co.in')
               }
               className='
                 bg-white/90 text-[#001529]
@@ -185,7 +185,7 @@ const Navbar = () => {
 
             <Button
               onClick={() =>
-                (window.location.href = 'https://abdash.netlify.app/auth')
+                (window.location.href = 'https://dash.abinstitute.co.in')
               }
               className='
                 bg-white/90 text-[#001529]

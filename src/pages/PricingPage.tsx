@@ -190,7 +190,7 @@ const PricingPage = () => {
     py-4
   '
                     onClick={() =>
-                      window.open('https://abdash.netlify.app/auth', '_blank')
+                      window.open('https://dash.abinstitute.co.in', '_blank')
                     }
                   >
                     Enroll Now – ₹1,499
